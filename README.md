@@ -49,11 +49,11 @@ Para visualizar el landing page puede ingresar a:
 
 [Heroku] ()
 
-## pasos para levntar el proyecto
+## Pasos para levantar el proyecto:
 
 - Clonar el repo
 - rails db:create
 - rails db:migrate
 - rails db:seed
 - rails s
-- Disfruta!
+- ¡Disfruta!
