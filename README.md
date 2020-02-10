@@ -38,9 +38,9 @@ El tablero Trello con el backlog y las historias de usuario está disponible en 
 [Tablero Trello] https://trello.com/b/hVKJLaJe/random-app
 
 El diseño inicial de la base de datos (no implementado aún)
-contempla las siguientes tablas/modelos con las relaciones indicadas.
+contempla las siguientes tablas/modelos con las relaciones indicadas, como se puede ver en el modelo lógico:
 
-![alt text] [logic]
+![alt text][logic]
 
 [logic]: /modelo_lógico.png "Diagrama lógico"
 
