@@ -47,7 +47,7 @@ contempla las siguientes tablas/modelos con las relaciones indicadas, como se pu
 
 Para visualizar el landing page puede ingresar a:
 
-[Heroku] ()
+[Heroku] (https://fathomless-cove-15048.herokuapp.com/)
 
 ## Pasos para levantar el proyecto:
 
