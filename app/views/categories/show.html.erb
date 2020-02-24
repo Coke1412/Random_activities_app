@@ -10,10 +10,16 @@
   <%= @category.description %>
 </p>
 
+<% if @category.image.attached? %>
 <p>
-  <strong>Image:</strong>
-  <%= image_tag @category.image %>
+  <strong>Images:</strong>
+  <br>
+    <% @category.image.each do |image| %>
+    <%= image_tag image.variant(resize: "200x200") %>
+    <%= link_to 'Remove', delete_image_post_path(@category, image), method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
 </p>
+<% end %>
 
 <%= link_to 'Edit', edit_category_path(@category) %> |
 <%= link_to 'Back', categories_path %>
