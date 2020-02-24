@@ -15,8 +15,8 @@
   <strong>Images:</strong>
   <br>
     <% @category.image.each do |image| %>
-    <%= image_tag image.variant(resize: "200x200") %>
-    <%= link_to 'Remove', delete_image_post_path(@category, image), method: :delete, data: { confirm: 'Are you sure?' } %>
+    <%= image_tag image %>
+    <%= link_to 'Remove', delete_image_category_path(@category, image), method: :delete, data: { confirm: 'Are you sure?' } %>
   <% end %>
 </p>
 <% end %>

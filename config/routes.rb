@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
 
   resources :activities
-  resources :categories
+  resources :categories do
+    delete 'delete/:image_id', on: :member, to: 'categories#destroy_image', as: 'delete_image'
+  end
+  
   devise_for :users
   
   get 'pages/index'

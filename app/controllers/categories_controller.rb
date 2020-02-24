@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-  before_action :set_category, only: [:show, :edit, :update, :destroy]
+  before_action :set_category, only: [:show, :edit, :update, :destroy, :destroy_image]
 
   # GET /categories
   # GET /categories.json
@@ -59,6 +59,14 @@ class CategoriesController < ApplicationController
       format.html { redirect_to categories_url, notice: 'Category was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def destroy_image
+    @image = ActiveStorage::Attachment.find(params[:image_id])
+    @image.purge
+    redirect_to categories_path, notice: "The image was successfully deleted." 
+
+    
   end
 
   private

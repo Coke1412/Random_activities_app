@@ -1,4 +1,4 @@
 class Category < ApplicationRecord
     has_many :activities
-    has_one_attached :image
+    has_many_attached :image
 end
