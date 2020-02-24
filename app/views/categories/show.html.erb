@@ -6,8 +6,13 @@
 </p>
 
 <p>
+  <strong>Description:</strong>
+  <%= @category.description %>
+</p>
+
+<p>
   <strong>Image:</strong>
-  <%= @category.image %>
+  <%= image_tag @category.image %>
 </p>
 
 <%= link_to 'Edit', edit_category_path(@category) %> |
