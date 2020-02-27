@@ -4,7 +4,8 @@ Proyecto de integración de contenido en Desafio Latam G28 Full Stack
 
 El proyecto es una aplicación que entrega aleatoriamente actividades para realizar en momentos de ocio. 
 Construida con Ruby 2.6.4, Ruby on Rails 5.2.3 y base de datos Postgresql.
-El diagrama conceptual muestra las principales entidades con las que trabajará la app:
+
+El siguiente diagrama conceptual muestra las principales entidades con las que trabajará la app:
 
 ![alt text][concept]
 
@@ -19,7 +20,7 @@ contempla las siguientes tablas/modelos con las relaciones indicadas, como se pu
 
 ![alt text][logic]
 
-[logic]: /modelo_lógico.png "Diagrama lógico"
+[logic]: /modelo_logico.jpg "Diagrama lógico"
 
 
 Para visualizar el landing page puede ingresar a:
