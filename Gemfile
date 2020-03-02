@@ -28,6 +28,10 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 # gem 'AWS'
 gem "aws-sdk-s3", group: :production, require: false
+# Entity relationship diagrams gem
+gem 'rails-erd', group: :development
+# CanCanCan gem
+gem 'cancancan'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 gem 'image_processing', '~> 1.2'
