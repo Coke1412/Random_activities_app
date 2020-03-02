@@ -53,6 +53,7 @@ Events.image.attach(io: File.open( './app/assets/images/categories/events.png'),
 # Category.create(name: "Tourism", description: "traveling to and staying in places outside one's usual environment for not more than one consecutive year for leisure and not less than 24 hours")
 
 Skateboarding = Activity.create(
-    name: "Skateboarding")
+    name: "Skateboarding",
+    category: Events)
 
 Skateboarding.image.attach(io: File.open( './app/assets/images/activities/skateboarding.jpg'), filename: 'skateboarding.jpg', content_type: 'image/jpg')
