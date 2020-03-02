@@ -14,10 +14,9 @@
 
   <% if @category.image.attached? %>
   <p>
-      <% @category.image.each do |image| %>
-      <%= image_tag image.variant(resize:"400x400") %> <br> <br>
-      <%= link_to 'Remove', delete_image_category_path(@category, image), method: :delete, data: { confirm: 'Are you sure?' } %>
-    <% end %>
+      
+      <%= image_tag @category.image.variant(resize:"400x400") %> <br> <br>
+     
   </p>
   <% end %>
 

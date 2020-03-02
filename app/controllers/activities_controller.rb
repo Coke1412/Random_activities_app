@@ -15,10 +15,12 @@ class ActivitiesController < ApplicationController
   # GET /activities/new
   def new
     @activity = Activity.new
+    @categories = Category.pluck(:name, :id)
   end
 
   # GET /activities/1/edit
   def edit
+    @categories = Category.pluck(:name, :id)
   end
 
   # POST /activities

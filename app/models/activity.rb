@@ -1,4 +1,4 @@
 class Activity < ApplicationRecord
-    belongs_to :categories
+    belongs_to :category
     has_one_attached :image
 end
