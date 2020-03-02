@@ -19,7 +19,7 @@
       <% @activities.each do |activity| %>
         <tr>
           <td><%= activity.name %></td>
-          <td><%= activity.image %></td>
+          <td><%= image_tag activity.image.variant(resize: "200x200") %></td>
           <td><%= activity.category.name %></td>
           <td><%= link_to 'Show', activity %></td>
           <td><%= link_to 'Edit', edit_activity_path(activity) %></td>
