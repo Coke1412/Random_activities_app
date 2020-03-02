@@ -1,25 +1,28 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @category.name %>
-</p>
+<div class="container">
 
-<p>
-  <strong>Description:</strong>
-  <%= @category.description %>
-</p>
+  <p>
+    <strong>Name:</strong>
+    <%= @category.name %>
+  </p>
 
-<% if @category.image.attached? %>
-<p>
-  <strong>Image:</strong>
-  <br>
-    <% @category.image.each do |image| %>
-    <%= image_tag image.variant(resize:"400x400") %> <br> <br>
-    <%= link_to 'Remove', delete_image_category_path(@category, image), method: :delete, data: { confirm: 'Are you sure?' } %>
+  <p>
+    <strong>Description:</strong>
+    <%= @category.description %>
+  </p>
+
+  <% if @category.image.attached? %>
+  <p>
+      <% @category.image.each do |image| %>
+      <%= image_tag image.variant(resize:"400x400") %> <br> <br>
+      <%= link_to 'Remove', delete_image_category_path(@category, image), method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
+  </p>
   <% end %>
-</p>
-<% end %>
 
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+  <%= link_to 'Edit', edit_category_path(@category) %> |
+  <%= link_to 'Back', categories_path %>
+
+
+</div>
