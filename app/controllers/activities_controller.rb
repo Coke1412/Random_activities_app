@@ -1,5 +1,5 @@
 class ActivitiesController < ApplicationController
-  before_action :set_activity, only: [:show, :edit, :update, :destroy]
+  before_action :set_activity, only: [:show, :edit, :update, :destroy, :destroy_image]
 
   # GET /activities
   # GET /activities.json
@@ -59,6 +59,12 @@ class ActivitiesController < ApplicationController
       format.html { redirect_to activities_url, notice: 'Activity was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def destroy_image
+    @image = ActiveStorage::Attachment.find(params[:image_id])
+    @image.purge
+    redirect_to categories_path, notice: "The image was successfully deleted." 
   end
 
   private

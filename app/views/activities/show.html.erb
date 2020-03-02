@@ -5,10 +5,17 @@
   <%= @activity.name %>
 </p>
 
+<% if @activity.image.attached? %>
 <p>
   <strong>Image:</strong>
-  <%= @activity.image %>
+  <br>
+    <% @activity.image.each do |image| %>
+    <%= image_tag image.variant(resize:"400x400") %> <br> <br>
+    <%= link_to 'Remove', delete_image_category_path(@ativity, image), method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
 </p>
+<% end %>
+
 
 <p>
   <strong>Category:</strong>
