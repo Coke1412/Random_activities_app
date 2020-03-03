@@ -8,8 +8,8 @@
 
 
 
-Activity.destroy_all
-Category.destroy_all
+Activity.delete_all
+Category.delete_all
 User.destroy_all
  
 
