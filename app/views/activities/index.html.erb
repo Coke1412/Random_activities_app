@@ -19,7 +19,7 @@
       <% @activities.each do |activity| %>
         <tr>
           <td><%= activity.name %></td>
-          <% if category.image.attached?  %>
+          <% if activity.image.attached?  %>
           <td><%= image_tag activity.image.variant(resize: "200x200") %></td>
           <%= end %>
           <td><%= activity.category.name %></td>
