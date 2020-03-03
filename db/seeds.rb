@@ -8,8 +8,8 @@
 
 
 
-Category.destroy_all
 Activity.destroy_all
+Category.destroy_all
 User.destroy_all
  
 
@@ -21,27 +21,27 @@ Art = Category.create(
     name: "Art",
     description: "The quality, production, expression, or realm, according to aesthetic principles, of what is beautiful, appealing, or of more than ordinary significance. e.g. Music, films, literature, etc")
 
-    #Art.image.attach(io: File.open( './app/assets/images/categories/art.png'), filename: 'art.png', content_type: 'image/png')
+    Art.image.attach(io: File.open( './app/assets/images/categories/art.png'), filename: 'art.png', content_type: 'image/png')
 
 
 Electronics = Category.create(
     name: "Electronics", 
     description: "Electronic related activities, such as watching TV, browsing internet, playing videogames, etc.")
 
-    #Electronics.image.attach(io: File.open( './app/assets/images/categories/electronics02.jpg'), filename: 'electronics02.jpg', content_type: 'image/jpg')
+    Electronics.image.attach(io: File.open( './app/assets/images/categories/electronics02.jpg'), filename: 'electronics02.jpg', content_type: 'image/jpg')
 
 
 Events = Category.create(
     name: "Events", 
     description: "Indoor/outdoor events")
 
-    #Events.image.attach(io: File.open('./app/assets/images/categories/events.png'), filename: 'events.png', content_type: 'image/png')
+    Events.image.attach(io: File.open('./app/assets/images/categories/events.png'), filename: 'events.png', content_type: 'image/png')
 
 Relaxation = Category.create(
      name: "Relaxation", 
      description: "The process to become calmer, less anxious, stressed or angered. It can also lower muscle tension, blood pressure and slow heart and breath rates, among other benefits.")
 
-    # Events.image.attach(io: File.open('./app/assets/images/categories/events.png'), filename: 'events.png', content_type: 'image/png')
+    Events.image.attach(io: File.open('./app/assets/images/categories/events.png'), filename: 'events.png', content_type: 'image/png')
 
 
 Studying = Category.create(
@@ -66,21 +66,21 @@ Music = Activity.create(
     category: Art
 )
 
-    #Music.image.attach(io: File.open( './app/assets/images/activities/art/playingmusic.jpg'), filename: 'playingmusic.jpg', content_type: 'image/jpg')
+    Music.image.attach(io: File.open( './app/assets/images/activities/art/playingmusic.jpg'), filename: 'playingmusic.jpg', content_type: 'image/jpg')
 
 Films = Activity.create(
     name: "Films",
-    # category: Art
+    category: Art
 )
 
 Literature = Activity.create(
     name: "Literature",
-    # category: Art
+    category: Art
 )
 
 Videogames = Activity.create(
     name: "Videogames",
-    # category: Art
+    category: Art
 )
 
 
@@ -93,4 +93,4 @@ Skateboarding = Activity.create(
     name: "Skateboarding",
     category: Sports)
 
-#Skateboarding.image.attach(io: File.open( './app/assets/images/activities/sports/skateboarding.jpg'), filename: 'skateboarding.jpg', content_type: 'image/jpg')
+Skateboarding.image.attach(io: File.open( './app/assets/images/activities/sports/skateboarding.jpg'), filename: 'skateboarding.jpg', content_type: 'image/jpg')
