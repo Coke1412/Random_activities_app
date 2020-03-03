@@ -6,24 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# require 'aws-sdk-s3'
-# creds = Aws::InstanceProfileCredentials.new
+
 
 Category.destroy_all
 Activity.destroy_all
 User.destroy_all
  
-
-# s3 = Aws::S3::Resource.new(region: 'us-east-2')
-
-# Create the object to retrieve
-#  obj = s3.bucket('my-random-app').object('art.png')    # change this to your bucket name
- 
-# # Get the item's content and save it to local
-#  obj.get(response_target: 'app/assets/images/categories/art.png')
-#  Category.image.attach(io: File.open("app/assets/images/categories/art.png"), filename: "art.png")
-
-
 
 
 
