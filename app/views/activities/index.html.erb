@@ -21,7 +21,7 @@
           <td><%= activity.name %></td>
           <% if activity.image.attached?  %>
           <td><%= image_tag activity.image.variant(resize: "200x200") %></td>
-          <%= end %>
+          <% end %>
           <td><%= activity.category.name %></td>
           <td><%= link_to 'Show', activity %></td>
           <td><%= link_to 'Edit', edit_activity_path(activity) %></td>
