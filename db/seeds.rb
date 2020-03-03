@@ -70,17 +70,17 @@ Music = Activity.create(
 
 Films = Activity.create(
     name: "Films",
-    category: Art
+    # category: Art
 )
 
 Literature = Activity.create(
     name: "Literature",
-    category: Art
+    # category: Art
 )
 
 Videogames = Activity.create(
     name: "Videogames",
-    category: Art
+    # category: Art
 )
 
 
