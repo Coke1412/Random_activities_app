@@ -7,13 +7,27 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # require 'aws-sdk-s3'
-
-# s3 = Aws::S3::Resource.new(region: 'us-east-2')
+# creds = Aws::InstanceProfileCredentials.new
 
 Category.destroy_all
 Activity.destroy_all
 User.destroy_all
+ 
 
+# s3 = Aws::S3::Resource.new(region: 'us-east-2')
+
+# Create the object to retrieve
+#  obj = s3.bucket('my-random-app').object('art.png')    # change this to your bucket name
+ 
+# # Get the item's content and save it to local
+#  obj.get(response_target: 'app/assets/images/categories/art.png')
+#  Category.image.attach(io: File.open("app/assets/images/categories/art.png"), filename: "art.png")
+
+
+
+
+
+#CATEGORIES
 
 Art = Category.create(
     name: "Art",
@@ -21,39 +35,74 @@ Art = Category.create(
 
     Art.image.attach(io: File.open( './app/assets/images/categories/art.png'), filename: 'art.png', content_type: 'image/png')
 
-# Create the object to retrieve
-#  obj = s3.bucket('my-random-app').object('Art')    # change this to your bucket name
- 
-# # Get the item's content and save it to local
-#  obj.get(response_target: 'app/assets/images/categories/art.png')
-#  Category.image.attach(io: File.open("app/assets/images/categories/art.png"), filename: "art.png")
 
- 
+Electronics = Category.create(
+    name: "Electronics", 
+    description: "Electronic related activities, such as watching TV, browsing internet, playing videogames, etc.")
+
+    Electronics.image.attach(io: File.open( './app/assets/images/categories/electronics02.jpg'), filename: 'electronics02.jpg', content_type: 'image/jpg')
 
 
+Events = Category.create(
+    name: "Events", 
+    description: "Indoor/outdoor events")
+
+    Events.image.attach(io: File.open('./app/assets/images/categories/events.png'), filename: 'events.png', content_type: 'image/png')
+
+Relaxation = Category.create(
+     name: "Relaxation", 
+     description: "The process to become calmer, less anxious, stressed or angered. It can also lower muscle tension, blood pressure and slow heart and breath rates, among other benefits.")
+
+     Events.image.attach(io: File.open('./app/assets/images/categories/events.png'), filename: 'events.png', content_type: 'image/png')
+
+
+Studying = Category.create(
+    name: "Studying", 
+    description: "The use of the mind to gain knowledge, as by reading, investigation, etc")
+
+Sports = Category.create(
+    name: "Sports", 
+    description: "An often competitive athletic activity requiring skill or physical ability")
+
+Tourism = Category.create(
+    name: "Tourism", 
+    description: "traveling to and staying in places outside one's usual environment for not more than one consecutive year for leisure and not less than 24 hours")
+
+
+    #ACTIVITIES
+
+    #ART
+
+Music = Activity.create(
+    name: "Music",
+    category: Art
+)
+
+    Music.image.attach(io: File.open( './app/assets/images/activities/art/playingmusic.jpg'), filename: 'playingmusic.jpg', content_type: 'image/jpg')
+
+Films = Activity.create(
+    name: "Films",
+    category: Art
+)
+
+Literature = Activity.create(
+    name: "Literature",
+    category: Art
+)
+
+Videogames = Activity.create(
+    name: "Videogames",
+    category: Art
+)
 
 
 
 
-Electronics = Category.create(name: "Electronics", description: "Electronic related activities, such as watching TV, browsing internet, playing videogames, etc.")
 
-Electronics.image.attach(io: File.open( './app/assets/images/categories/electronics02.jpg'), filename: 'electronics02.jpg', content_type: 'image/jpg')
-
-
-Events = Category.create(name: "Events", description: "Indoor/outdoor events")
-
-Events.image.attach(io: File.open( './app/assets/images/categories/events.png'), filename: 'events.png', content_type: 'image/png')
-
-# Category.create(name: "Relaxation", description: "The process to become calmer, less anxious, stressed or angered. It can also lower muscle tension, blood pressure and slow heart and breath rates, among other benefits.")
-
-# Category.create(name: "Studying", description: "The use of the mind to gain knowledge, as by reading, investigation, etc")
-
-# Category.create(name: "Sports", description: "An often competitive athletic activity requiring skill or physical ability")
-
-# Category.create(name: "Tourism", description: "traveling to and staying in places outside one's usual environment for not more than one consecutive year for leisure and not less than 24 hours")
+#SPORTS
 
 Skateboarding = Activity.create(
     name: "Skateboarding",
-    category: Events)
+    category: Sports)
 
-Skateboarding.image.attach(io: File.open( './app/assets/images/activities/skateboarding.jpg'), filename: 'skateboarding.jpg', content_type: 'image/jpg')
+Skateboarding.image.attach(io: File.open( './app/assets/images/activities/sports/skateboarding.jpg'), filename: 'skateboarding.jpg', content_type: 'image/jpg')
