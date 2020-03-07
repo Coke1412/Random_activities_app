@@ -23,8 +23,8 @@
           <td><%= image_tag activity.image.variant(resize: "200x200") %></td>
           <% end %>
           <td><%= activity.category.name %></td>
-          <td><%= link_to 'Show', activity %></td>
-          <td><%= link_to 'Edit', edit_activity_path(activity) %></td>
+          <td><%= link_to 'Show', activity %> |</td>
+          <td><%= link_to 'Edit', edit_activity_path(activity) %> |</td>
           <td><%= link_to 'Destroy', activity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>

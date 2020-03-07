@@ -41,56 +41,80 @@ Relaxation = Category.create(
      name: "Relaxation", 
      description: "The process to become calmer, less anxious, stressed or angered. It can also lower muscle tension, blood pressure and slow heart and breath rates, among other benefits.")
 
-    Events.image.attach(io: File.open('./app/assets/images/categories/events.png'), filename: 'events.png', content_type: 'image/png')
+    Relaxation.image.attach(io: File.open('./app/assets/images/categories/relaxation.jpg'), filename: 'relaxation.jpg', content_type: 'image/jpg')
 
 
 Studying = Category.create(
     name: "Studying", 
     description: "The use of the mind to gain knowledge, as by reading, investigation, etc")
 
+    Studying.image.attach(io: File.open('./app/assets/images/categories/studying.jpg'), filename: 'studying.jpg', content_type: 'image/jpg')
+
 Sports = Category.create(
     name: "Sports", 
     description: "An often competitive athletic activity requiring skill or physical ability")
+
+    Sports.image.attach(io: File.open('./app/assets/images/categories/sports.jpg'), filename: 'sports.jpg', content_type: 'image/jpg')
 
 Tourism = Category.create(
     name: "Tourism", 
     description: "traveling to and staying in places outside one's usual environment for not more than one consecutive year for leisure and not less than 24 hours")
 
+    Tourism.image.attach(io: File.open('./app/assets/images/categories/tourism.jpg'), filename: 'tourism.jpg', content_type: 'image/jpg')
 
-    #ACTIVITIES
+
+#ACTIVITIES
 
     #ART
 
-Music = Activity.create(
-    name: "Music",
+Play_music = Activity.create(
+    name: "Play an instrument",
     category: Art
 )
 
-    Music.image.attach(io: File.open( './app/assets/images/activities/art/playingmusic.jpg'), filename: 'playingmusic.jpg', content_type: 'image/jpg')
+    Play_music.image.attach(io: File.open( './app/assets/images/activities/art/playingmusic.jpg'), filename: 'playingmusic.jpg', content_type: 'image/jpg')
 
-Films = Activity.create(
-    name: "Films",
+Film = Activity.create(
+    name: "Watch a film",
     category: Art
 )
 
-Literature = Activity.create(
-    name: "Literature",
+Film.image.attach(io: File.open( './app/assets/images/activities/art/watchafilm.jpg'), filename: 'watchafilm.jpg', content_type: 'image/jpg')
+
+Reading = Activity.create(
+    name: "Read a book",
     category: Art
 )
 
-Videogames = Activity.create(
-    name: "Videogames",
-    category: Art
+Reading.image.attach(io: File.open( './app/assets/images/activities/art/readabook.jpg'), filename: 'readabook.jpg', content_type: 'image/jpg')
+
+
+
+#ELECTRONICS
+
+Gaming = Activity.create(
+    name: "Play a videogame",
+    category: Electronics
 )
 
+Gaming.image.attach(io: File.open( './app/assets/images/activities/electronics/gaming.jpg'), filename: 'gaming.jpg', content_type: 'image/jpg')
 
 
 
+#RELAXATION
+
+listening_music = Activity.create(
+    name: "Listen to music",
+    category: Relaxation
+)
+
+listening_music.image.attach(io: File.open( './app/assets/images/activities/relaxation/listeningmusic.jpeg'), filename: 'listeningmusic.jpeg', content_type: 'image/jpeg')
 
 #SPORTS
 
 Skateboarding = Activity.create(
-    name: "Skateboarding",
-    category: Sports)
+    name: "go skateboarding",
+    category: Sports
+)
 
 Skateboarding.image.attach(io: File.open( './app/assets/images/activities/sports/skateboarding.jpg'), filename: 'skateboarding.jpg', content_type: 'image/jpg')
