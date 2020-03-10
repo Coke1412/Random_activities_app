@@ -4,6 +4,7 @@
 
 <h1 class="category-name display-2 text-center"> <u> Categories </u> </h1> <br>
 
+
   <%#  CATEGORIES CARDS %>
 
   <% @categories.each_slice(3) do |categories| %>
@@ -22,6 +23,8 @@
           <div class="card-body">
             <p class="card-text category-name display-4 text-center"> 
               <%= category.name %>
+              
+              
             </p>
               
               <%= link_to 'Show', category %> |
