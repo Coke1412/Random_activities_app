@@ -1,22 +1,18 @@
 body {
-    background-image: url(/assets/bg03.jpg);
+    background-image: url('https://i.imgur.com/AaQ2Utv.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     font-family: Tangerine;
 }
 
-/* .bg {
-    background-image: url(/assets/bg04.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-} */
+
 
 
 
 body h1 {
     font-family: Tangerine;
-    font-size: 4vw;
-    font-weight: bold;
+    font-weight: normal;
+    color: antiquewhite;
 }
 
 body p {
