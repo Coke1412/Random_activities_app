@@ -1,7 +1,16 @@
 body {
-    background-image: url(/assets/12.jpg);
+    background-image: url(/assets/bg03.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     font-family: Tangerine;
 }
+
+/* .bg {
+    background-image: url(/assets/bg04.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+} */
+
 
 
 body h1 {
@@ -17,21 +26,17 @@ body p {
 
 
 
-.category-name{
-    font-family: Tangerine;
-    
-    
-}
+
 
 .card-img-top {
-    width: 10%;
-    height: 15vw;
+    height: 20vw;
     object-fit: cover;
 }
 
-.card-text {
+.card-title {
     color: white;
     font-size: 20px;
+    font-family: Tangerine;
     position: absolute;
     top: 50%;
     left: 50%;
