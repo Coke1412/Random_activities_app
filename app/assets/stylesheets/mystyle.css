@@ -1,5 +1,6 @@
 body {
     background-image: url(/assets/12.jpg);
+    font-family: Tangerine;
 }
 
 
@@ -10,14 +11,15 @@ body h1 {
 }
 
 body p {
-    font-family: Tangerine;
-    font-size: 3vw;
+    font-family: 'Trebuchet MS';
+    font-size: 2vw;
 }
 
 
 
 .category-name{
     font-family: Tangerine;
+    
     
 }
 
@@ -26,3 +28,30 @@ body p {
     height: 15vw;
     object-fit: cover;
 }
+
+.card-text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition:0.6s;
+    background-color: rgb(14, 59, 77);
+  }
+
+  .card:hover .overlay {
+    opacity: 0.6;
+  }
