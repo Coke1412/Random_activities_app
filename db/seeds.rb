@@ -11,6 +11,10 @@
 Activity.delete_all
 Category.delete_all
 User.destroy_all
+
+
+
+
  
 
 
@@ -118,3 +122,5 @@ Skateboarding = Activity.create(
 )
 
 Skateboarding.image.attach(io: File.open( './app/assets/images/activities/sports/skateboarding.jpg'), filename: 'skateboarding.jpg', content_type: 'image/jpg')
+
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
