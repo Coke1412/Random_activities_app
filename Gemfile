@@ -40,6 +40,9 @@ gem 'image_processing', '~> 1.2'
 # gem 'capistrano-rails', group: :development
 # Activeadmin gem
 gem 'activeadmin'
+#Facebook Login gem
+gem 'omniauth-facebook'
+gem 'dotenv-rails', groups: [:development, :test]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
