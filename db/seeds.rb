@@ -26,21 +26,21 @@ Art = Category.create(
     name: "Art",
     description: "The quality, production, expression, or realm, according to aesthetic principles, of what is beautiful, appealing, or of more than ordinary significance. e.g. Music, films, literature, etc")
 
-    Art.image.attach(io: File.open( './app/assets/images/categories/art.png'), filename: 'art.png', content_type: 'image/png')
+    Art.image.attach(io: File.open( './app/assets/images/categories/art.jpg'), filename: 'art.jpg', content_type: 'image/jpg')
 
 
 Electronics = Category.create(
     name: "Electronics", 
     description: "Electronic related activities, such as watching TV, browsing internet, playing videogames, etc.")
 
-    Electronics.image.attach(io: File.open( './app/assets/images/categories/electronics02.jpg'), filename: 'electronics02.jpg', content_type: 'image/jpg')
+    Electronics.image.attach(io: File.open( './app/assets/images/categories/electronics.jpg'), filename: 'electronics.jpg', content_type: 'image/jpg')
 
 
 Events = Category.create(
     name: "Events", 
     description: "Indoor/outdoor events")
 
-    Events.image.attach(io: File.open('./app/assets/images/categories/events.png'), filename: 'events.png', content_type: 'image/png')
+    Events.image.attach(io: File.open('./app/assets/images/categories/events.jpg'), filename: 'events.jpg', content_type: 'image/jpg')
 
 Relaxation = Category.create(
      name: "Relaxation", 
