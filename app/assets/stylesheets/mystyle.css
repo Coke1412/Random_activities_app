@@ -19,6 +19,12 @@ body p {
     font-size: 2.2vw;
 }
 
+.card {
+  -webkit-box-shadow: 42px 42px 47px 7px rgba(0,0,0,0.6);
+  -moz-box-shadow: 42px 42px 47px 7px rgba(0,0,0,0.6);
+  box-shadow: 42px 42px 47px 7px rgba(0,0,0,0.6);
+}
+
 .nav-item{
   font-family: 'Bellota Text', cursive;
 }
@@ -26,6 +32,7 @@ body p {
 .card-img-top {
     height: 20vw;
     object-fit: cover;
+    
 }
 
 .card-title {
