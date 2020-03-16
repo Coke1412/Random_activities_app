@@ -59,7 +59,7 @@ Social = Category.create(
     name: "Social",
     description: "Group activities with friends or family")
 
-    Social.image.attach(io File.open('./app/assets/images/categories/social.jpg'), filename: 'social.jpg', content_type: 'image/jpg')
+    Social.image.attach(io: File.open('./app/assets/images/categories/social.jpg'), filename: 'social.jpg', content_type: 'image/jpg')
 
 
 Sports = Category.create(
