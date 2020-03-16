@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: {
-    omniauth_callback: 'users/omniauth_callbacks'
+    registrations: 'users/registrations',
+    omniauth_callbacks: 'users/omniauth_callbacks'
   }
    
   devise_for :admin_users, ActiveAdmin::Devise.config
@@ -11,9 +12,9 @@ Rails.application.routes.draw do
     delete 'delete/:image_id', on: :member, to: 'categories#destroy_image', as: 'delete_image'
   end
 
-  devise_scope :user do
-    delete 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
-  end
+  # devise_scope :user do
+  #   delete 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
+  # end
   
   get 'pages/index'
     
