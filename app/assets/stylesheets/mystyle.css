@@ -19,6 +19,10 @@ body p {
     font-size: 2.2vw;
 }
 
+.nav-item{
+  
+}
+
 .card-img-top {
     height: 20vw;
     object-fit: cover;
