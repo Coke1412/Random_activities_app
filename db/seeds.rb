@@ -14,6 +14,15 @@ User.destroy_all
 AdminUser.destroy_all
 
 
+10.times do |i|
+    User.create!({
+        email: "user_#{i}@gmail.com",
+        password: '123456',
+        created_at: Faker::Number.number(digits:1).to_i.day.ago}
+    )
+end
+
+
 
 
 

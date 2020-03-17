@@ -2,6 +2,6 @@
 <%= javascript_include_tag "https://www.google.com/jsapi",
 "chartkick" %>
 
-<% my_chart = {"ejemplo1": 20, "ejemplo2": 30} %>
+<% my_chart = User.group_by_day(:created_at).count %>
 
 <%= bar_chart my_chart %>

@@ -114,6 +114,8 @@ GEM
       warden (~> 1.2.3)
     erubi (1.9.0)
     execjs (2.7.0)
+    faker (2.10.2)
+      i18n (>= 1.6, < 2)
     faraday (1.0.0)
       multipart-post (>= 1.2, < 3)
     ffi (1.12.2)
@@ -122,6 +124,8 @@ GEM
     formtastic_i18n (0.6.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    groupdate (5.0.0)
+      activesupport (>= 5)
     has_scope (0.7.2)
       actionpack (>= 4.1)
       activesupport (>= 4.1)
@@ -322,6 +326,8 @@ DEPENDENCIES
   chromedriver-helper
   coffee-rails (~> 4.2)
   devise
+  faker
+  groupdate
   image_processing (~> 1.2)
   jbuilder (~> 2.5)
   jquery-rails

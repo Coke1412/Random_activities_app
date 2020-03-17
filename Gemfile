@@ -44,8 +44,15 @@ gem 'activeadmin'
 gem 'omniauth-facebook'
 #gem 'dotenv-rails', groups: [:development, :test]
 
+#gem Faker (generates random data)
+
+gem 'faker'
+
 # Chartkick
 gem 'chartkick'
+
+# Groupdate gem
+gem 'groupdate'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
