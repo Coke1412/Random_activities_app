@@ -6,7 +6,10 @@
 
 
 
-<%= link_to "Log in", new_session_path(resource_name), class: 'btn btn-outline-info' %> 
-<%= link_to "Sign up", new_registration_path(resource_name), class: 'btn btn-outline-info' %>
+<% unless user_signed_in? %>
+    <%= link_to "Log in", new_session_path(resource_name), class: 'btn btn-outline-info' %> 
+    <%= link_to "Sign up", new_registration_path(resource_name), class: 'btn btn-outline-info' %> 
+<% end %>
+<br><br>
 
 

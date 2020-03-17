@@ -11,6 +11,7 @@
 Activity.delete_all
 Category.delete_all
 User.destroy_all
+AdminUser.destroy_all
 
 
 
