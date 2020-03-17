@@ -29,14 +29,17 @@ ActiveAdmin.register_page "Dashboard" do
     end
 
     columns do
-      panel "Usuarios" do
+      panel "Users" do
         ul do
-          li "Usuarios registrados: #{User.count}"
-          li "Administradores registrados: #{AdminUser.count}"
+          li "Registered Users: #{User.count}"
+          li "Registered Admins: #{AdminUser.count}"
         end
       end
     end
 
+    panel "Chart" do
+      render 'shared/chart'
+      end
 
   end
   

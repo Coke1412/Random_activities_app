@@ -44,6 +44,9 @@ gem 'activeadmin'
 gem 'omniauth-facebook'
 #gem 'dotenv-rails', groups: [:development, :test]
 
+# Chartkick
+gem 'chartkick'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 

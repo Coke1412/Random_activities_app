@@ -4,11 +4,11 @@
 
     <p>Have a little free time and can't decide what to do because too many options come to your head at the same time? Use your Randtivities app to choose categories of all the things you like to do in your free time, related with art, electronics, sports, relaxation. etc. Then select the specific activities you like and you're good to go! With just a single button, Randtivities App will make a decision for you to enjoy. As simple as that. Have fun! </p>
 
-
+    
 
 <% unless user_signed_in? %>
-    <%= link_to "Log in", new_session_path(resource_name), class: 'btn btn-outline-info' %> 
-    <%= link_to "Sign up", new_registration_path(resource_name), class: 'btn btn-outline-info' %> 
+    <%= link_to "Log in", new_session_path(resource_name), class: 'btn btn-info' %> 
+    <%= link_to "Sign up", new_registration_path(resource_name), class: 'btn btn-info' %> 
 <% end %>
 <br><br>
 
