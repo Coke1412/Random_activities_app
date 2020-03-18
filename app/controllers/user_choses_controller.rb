@@ -5,6 +5,8 @@ class UserChosesController < ApplicationController
   # GET /user_choses.json
   def index
     @user_choses = UserChose.all
+    @categories = Category.all
+    @activities = Activity.all
   end
 
   # GET /user_choses/1
