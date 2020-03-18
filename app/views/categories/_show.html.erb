@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+
+ 
+  <p>
+    <%= @category.name %>
+  </p>
+
+  <% if @category.image.attached? %>
+  <p>
+      
+      <%= image_tag @category.image.variant(resize:"400x400") %> <br> <br>
+     
+  </p>
+  <% end %>
+
+  <p>
+  
+    <%= @category.description %>
+  </p>
+
+  <%= link_to 'Edit', edit_category_path(@category) %> |
+  <%= link_to 'Back', categories_path %>
+
+
+</div>

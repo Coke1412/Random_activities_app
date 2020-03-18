@@ -16,7 +16,7 @@
       <div class="card-deck">
         <% categories.each do |category| %>
 
-          <div class="card mb-3" data-toggle="modal" data-target="#staticBackdrop" type="button">
+          <a class="card mb-3" data-toggle="modal" data-target="#staticBackdrop" type="button" href="<%= category_path(category) %>" data-remote="true">
             
             <% if category.image.attached?  %>
             <div>
@@ -25,11 +25,11 @@
             <% end %>
             
             <div class="card-body overlay">
-              <h5 class="card-title display-4 text-center"> <%= category.name %> </h5>
+              <h5 class="card-title display-4 text-center"> <%= category.name %>  </h5>
                           
             </div>
           
-          </div>
+          </a>
 
         <% end %>
       </div>
@@ -38,36 +38,10 @@
 
     <%# CATEGORIES CARD-DECK ENDS %>
 
+    <%= render 'modal', categories: @categories %>
 
 
-    <!-- Modal -->
-    <% @categories.each do |category| %>
     
-    <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          
-          
-          <div class="modal-body">
-            <%= image_tag category.image, class: 'card-img-top' %>
-            <%= category.description %>
-          </div>
-
-          <div class="modal-footer">
-            <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
-            
-          </div>
-          
-        </div>
-      </div>
-    </div>
-    <% end %>
 
 
   </div>
