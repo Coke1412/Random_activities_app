@@ -13,7 +13,7 @@ Rails.application.routes.draw do
     delete 'delete/:image_id', on: :member, to: 'categories#destroy_image', as: 'delete_image'
   end
 
-  #resources :choices
+  resources :activities_users
 
 
 

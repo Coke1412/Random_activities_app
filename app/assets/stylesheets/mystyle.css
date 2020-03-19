@@ -34,6 +34,7 @@ body p {
     color: whitesmoke;
 }
 
+
 .card {
   -webkit-box-shadow: 42px 42px 47px 7px rgba(0,0,0,0.6);
   -moz-box-shadow: 42px 42px 47px 7px rgba(0,0,0,0.6);
@@ -83,6 +84,14 @@ body p {
 
   .card:hover .overlay {
     opacity: 0.6;
+  }
+
+  footer {
+    clear: both;
+    position: relative;
+    height: 200px;
+    margin-top: -200px;
+    
   }
 
  
