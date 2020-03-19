@@ -6,7 +6,7 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav">
+    <ul class="navbar-nav ml-auto">
       <li class="nav-item active">
          <%= link_to 'Home', root_path, :class=> "nav-link text-white h4" %>
       </li>
@@ -22,10 +22,10 @@
       <li class="nav-item dropdown">
        <a class="nav-link dropdown-toggle"  href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <% if user_signed_in? %>
-          <i class=" nav-link far fa-user"></i>
+          <i class="nav-link far fa-user fa"></i>
              <%= current_user.email %>
           <% else %>
-          <i class="nav-link far fa-user"></i>
+          <i class="nav-link text-info far fa-user fa"></i>
           <% end %>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">

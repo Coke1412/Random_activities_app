@@ -1,22 +1,37 @@
+* {
+  box-sizing: border-box;
+} 
+
+
 body {
     background: url('https://i.imgur.com/AaQ2Utv.jpg') no-repeat center fixed;
     background-size: cover;
     
-    font-family: Tangerine;
 }
 
 
 body h1 {
     font-family: Tangerine;
     font-weight: normal;
-    font-size: 6.5vw;
+    font-size: 15vw;
     color: antiquewhite;
+    padding-bottom: 10vw;
+}
+
+body h5 {
+  font-family: 'Bellota Text', cursive;
+  text-align: justify;
+  font-size: 7vw;
+  color: whitesmoke;
+  padding-bottom: 10vw;
+  
 }
 
 body p {
     font-family: 'Bellota Text', cursive;
-    
-    font-size: 2.2vw;
+    text-align: justify;
+    font-size: 5vw;
+    color: whitesmoke;
 }
 
 .card {
@@ -35,12 +50,19 @@ body p {
     
 }
 
+#modal-image {
+  overflow: auto;
+  position: relative;
+  background-size: cover;
+}
+
+
 .card-title {
     color: white;
-    font-size: 20px;
+    font-size: 5vw;
     font-family: Tangerine;
     position: absolute;
-    top: 50%;
+    top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
@@ -62,3 +84,38 @@ body p {
   .card:hover .overlay {
     opacity: 0.6;
   }
+
+ 
+  
+  @media (min-width: 768px) { 
+  body p {
+    font-family: 'Bellota Text', cursive;
+    text-align: justify;
+    font-size: 2vw;
+    color: whitesmoke;
+  }
+
+
+  body h1 {
+    font-family: Tangerine;
+    font-weight: normal;
+    font-size: 7vw;
+    color: antiquewhite;
+    padding-bottom: 5vw;
+  }
+
+  body h5 {
+    font-family: 'Bellota Text', cursive;
+    text-align: justify;
+    font-size: 3vw;
+    color: whitesmoke;
+    padding-bottom: 5vw;
+
+  }
+}
+  
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 992px) { ... }
+  
+  // Extra large devices (large desktops, 1200px and up)
+  @media (min-width: 1200px) { ... }

@@ -5,21 +5,19 @@
   <%= @activity.name %>
 </h1>
 
-<% if @activity.image.attached? %>
-<p>
-  
+  <% if @activity.image.attached? %>
+  <p>
     
-    <%= image_tag @activity.image.variant(resize:"400x400") %> <br> <br>
-    
-  
-</p>
-<% end %>
+    <%= image_tag @activity.image.variant(resize:"300x300") %> <br> <br>
+
+  </p>
+  <% end %>
 
 
-<p>
-  <strong>Category:</strong>
-  <%= @activity.category %>
-</p>
+  <p>
+    <strong>Category:</strong>
+    <%= @activity.category %>
+  </p>
 
 <%= link_to 'Edit', edit_activity_path(@activity) %> |
 <%= link_to 'Back', activities_path %>
