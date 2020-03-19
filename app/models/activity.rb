@@ -4,4 +4,11 @@ class Activity < ApplicationRecord
     #si borro la actividad se borran los usuarios de la relación
 
     has_one_attached :image
+
+
+    def to_s
+        name
+        
+    end
+    
 end
