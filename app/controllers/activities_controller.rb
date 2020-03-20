@@ -27,6 +27,7 @@ class ActivitiesController < ApplicationController
   # POST /activities.json
   def create
     @activity = Activity.new(activity_params)
+    @categories = Category.pluck(:name, :id)
 
     respond_to do |format|
       if @activity.save

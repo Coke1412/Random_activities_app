@@ -13,7 +13,7 @@ El siguiente diagrama conceptual muestra las principales entidades con las que t
 
 El tablero Trello con el backlog y las historias de usuario está disponible en el siguiente link:
 
-[Tablero Trello] https://trello.com/b/hVKJLaJe/random-app
+[Tablero Trello] https://trello.com/b/hVKJLaJe/randtivities-app
 
 El diseño inicial de la base de datos (no implementado aún)
 contempla las siguientes tablas/modelos con las relaciones indicadas, como se puede ver en el modelo lógico:
@@ -25,7 +25,7 @@ contempla las siguientes tablas/modelos con las relaciones indicadas, como se pu
 
 Para visualizar el landing page puede ingresar a:
 
-[Heroku] (https://fathomless-cove-15048.herokuapp.com/)
+[Heroku] (http://g28-final-project.herokuapp.com/)
 
 ## Pasos para levantar el proyecto:
 

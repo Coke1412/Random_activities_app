@@ -25,7 +25,13 @@ class ActivitiesUsersController < ApplicationController
   # POST /activities_users
   # POST /activities_users.json
   def create
-    
+    cat = Category.find(params[:category_id])
+    act = Activity.find(params[:activity_id])
+ 
+      
+      cat.save
+      notice = { notice: 'Relation created'}
+    redirect_to root_path, notice
   end
 
   # PATCH/PUT /activities_users/1
