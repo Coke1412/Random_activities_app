@@ -24,77 +24,84 @@ end
 
 
 
-
-
- 
-
-
-
 #CATEGORIES
 
 Art = Category.create(
     name: "Art",
-    description: "The quality, production, expression, or realm, according to aesthetic principles, of what is beautiful, appealing, or of more than ordinary significance. e.g. Music, films, literature, etc")
+    description: "The quality, production, expression, or realm, according to aesthetic principles, of what is beautiful, appealing, or of more than ordinary significance. e.g. Music, films, literature, etc"
+)
 
-    Art.image.attach(io: File.open( './app/assets/images/categories/art.jpg'), filename: 'art.jpg', content_type: 'image/jpg')
+Art.image.attach(io: File.open( './app/assets/images/categories/art.jpg'), filename: 'art.jpg', content_type: 'image/jpg')
 
 
 Electronics = Category.create(
     name: "Electronics", 
-    description: "Electronic related activities, such as watching TV, browsing internet, playing videogames, etc.")
+    description: "Electronic related activities, such as watching TV, browsing internet, playing videogames, etc."
+)
 
-    Electronics.image.attach(io: File.open( './app/assets/images/categories/electronics.jpg'), filename: 'electronics.jpg', content_type: 'image/jpg')
+Electronics.image.attach(io: File.open( './app/assets/images/categories/electronics.jpg'), filename: 'electronics.jpg', content_type: 'image/jpg')
 
 
 Events = Category.create(
     name: "Events", 
-    description: "Indoor/outdoor events")
+    description: "Indoor/outdoor events"
+)
 
-    Events.image.attach(io: File.open('./app/assets/images/categories/events.jpg'), filename: 'events.jpg', content_type: 'image/jpg')
+Events.image.attach(io: File.open('./app/assets/images/categories/events.jpg'), filename: 'events.jpg', content_type: 'image/jpg')
+
 
 Relaxation = Category.create(
-     name: "Relaxation", 
-     description: "The process to become calmer, less anxious, stressed or angered. It can also lower muscle tension, blood pressure and slow heart and breath rates, among other benefits.")
+    name: "Relaxation", 
+    description: "The process to become calmer, less anxious, stressed or angered. It can also lower muscle tension, blood pressure and slow heart and breath rates, among other benefits."
+)
 
-    Relaxation.image.attach(io: File.open('./app/assets/images/categories/relaxation.jpg'), filename: 'relaxation.jpg', content_type: 'image/jpg')
+Relaxation.image.attach(io: File.open('./app/assets/images/categories/relaxation.jpg'), filename: 'relaxation.jpg', content_type: 'image/jpg')
 
 
 Studying = Category.create(
     name: "Studying", 
-    description: "The use of the mind to gain knowledge, as by reading, investigation, etc")
+    description: "The use of the mind to gain knowledge, as by reading, investigation, etc"
+)
 
-    Studying.image.attach(io: File.open('./app/assets/images/categories/studying.jpg'), filename: 'studying.jpg', content_type: 'image/jpg')
+Studying.image.attach(io: File.open('./app/assets/images/categories/studying.jpg'), filename: 'studying.jpg', content_type: 'image/jpg')
+
 
 Social = Category.create(
     name: "Social",
-    description: "Group activities with friends or family")
+    description: "Group activities with friends or family"
+)
 
-    Social.image.attach(io: File.open('./app/assets/images/categories/social.jpg'), filename: 'social.jpg', content_type: 'image/jpg')
+Social.image.attach(io: File.open('./app/assets/images/categories/social.jpg'), filename: 'social.jpg', content_type: 'image/jpg')
 
 
 Sports = Category.create(
     name: "Sports", 
-    description: "An often competitive athletic activity requiring skill or physical ability")
+    description: "An often competitive athletic activity requiring skill or physical ability"
+)
 
-    Sports.image.attach(io: File.open('./app/assets/images/categories/sports.jpg'), filename: 'sports.jpg', content_type: 'image/jpg')
+Sports.image.attach(io: File.open('./app/assets/images/categories/sports.jpg'), filename: 'sports.jpg', content_type: 'image/jpg')
+
 
 Tourism = Category.create(
     name: "Tourism", 
-    description: "traveling to and staying in places outside one's usual environment for not more than one consecutive year for leisure and not less than 24 hours")
+    description: "traveling to and staying in places outside one's usual environment for not more than one consecutive year for leisure and not less than 24 hours"
+)
 
-    Tourism.image.attach(io: File.open('./app/assets/images/categories/tourism.jpg'), filename: 'tourism.jpg', content_type: 'image/jpg')
+Tourism.image.attach(io: File.open('./app/assets/images/categories/tourism.jpg'), filename: 'tourism.jpg', content_type: 'image/jpg')
 
 
-#ACTIVITIES
 
-    #ART
+#ACTIVITIES BY CATEGORY:
+
+#ART
 
 Play_music = Activity.create(
     name: "Play an instrument",
     category: Art
 )
 
-    Play_music.image.attach(io: File.open( './app/assets/images/activities/art/playingmusic.jpg'), filename: 'playingmusic.jpg', content_type: 'image/jpg')
+Play_music.image.attach(io: File.open( './app/assets/images/activities/art/playingmusic.jpg'), filename: 'playingmusic.jpg', content_type: 'image/jpg')
+
 
 Film = Activity.create(
     name: "Watch a film",
@@ -102,6 +109,7 @@ Film = Activity.create(
 )
 
 Film.image.attach(io: File.open( './app/assets/images/activities/art/watchafilm.jpg'), filename: 'watchafilm.jpg', content_type: 'image/jpg')
+
 
 Reading = Activity.create(
     name: "Read a book",
@@ -132,6 +140,8 @@ listening_music = Activity.create(
 
 listening_music.image.attach(io: File.open( './app/assets/images/activities/relaxation/listeningmusic.jpeg'), filename: 'listeningmusic.jpeg', content_type: 'image/jpeg')
 
+
+
 #SPORTS
 
 Skateboarding = Activity.create(
@@ -140,6 +150,8 @@ Skateboarding = Activity.create(
 )
 
 Skateboarding.image.attach(io: File.open( './app/assets/images/activities/sports/skateboarding.jpg'), filename: 'skateboarding.jpg', content_type: 'image/jpg')
+
+
 
 #ADMIN_USER
 
