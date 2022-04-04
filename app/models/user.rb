@@ -6,8 +6,7 @@ class User < ApplicationRecord
          :omniauthable, omniauth_providers: %i[facebook]
 
   has_and_belongs_to_many :activities, dependent: :destroy
-
-  #Con lo de arriba, si borro el usuario se borran las actividades de la relación
+  # if user is destroyed, related activites too
 
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
