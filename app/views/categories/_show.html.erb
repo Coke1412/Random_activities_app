@@ -2,26 +2,21 @@
 
 <div class="container">
 
- 
   <p class="text-dark">
     <%= @category.name %>
   </p>
 
   <% if @category.image.attached? %>
   <p class="text-dark" id="modal-image">
-      
-      <%= image_tag @category.image.variant(resize:"300x200") %> <br> <br>
-     
+    <%= image_tag @category.image.variant(resize:"300x200") %> <br> <br>
   </p>
   <% end %>
 
   <p class="text-dark" >
-  
     <%= @category.description %>
   </p>
 
   <%= link_to 'Edit', edit_category_path(@category) %> |
   <%= link_to 'Back', categories_path %>
-
 
 </div>

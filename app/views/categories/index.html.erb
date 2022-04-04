@@ -1,7 +1,5 @@
 
-
 <div class="row">
-
   <div class="col-12">
 
     <h1 class="text-center"> My &nbsp C a t e g o r i e s </h1> <br><br>
@@ -11,26 +9,25 @@
 
     <% @categories.each_slice(3) do |categories| %>
         
-      <div class="card-deck">
-        <% categories.each do |category| %>
+    <div class="card-deck">
+      <% categories.each do |category| %>
 
-          <a class="card mb-3" data-toggle="modal" data-target="#staticBackdrop" type="button" href="<%= category_path(category) %>" data-remote="true">
-            
-            <% if category.image.attached?  %>
-            <div>
-              <%= image_tag category.image, class: "card-img-top" %>
-            </div>
-            <% end %>
-            
-            <div class="card-body overlay">
-              <h5 class="card-title display-4 text-center"> <%= category.name %>  </h5>
-                          
-            </div>
+        <a class="card mb-3" data-toggle="modal" data-target="#staticBackdrop" type="button" href="<%= category_path(category) %>" data-remote="true">
           
-          </a>
+          <% if category.image.attached?  %>
+          <div>
+            <%= image_tag category.image, class: "card-img-top" %>
+          </div>
+          <% end %>
+          
+          <div class="card-body overlay">
+            <h5 class="card-title display-4 text-center"> <%= category.name %> </h5>       
+          </div>
+        
+        </a>
 
-        <% end %>
-      </div>
+      <% end %>
+    </div>
 
     <% end %>
 
@@ -39,7 +36,6 @@
     <%= render 'modal', categories: @categories %>
 
   </div>
-
 </div>
   
 <br>

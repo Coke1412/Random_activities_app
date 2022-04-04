@@ -1,18 +1,14 @@
 <p id="notice"><%= notice %></p>
 
 <h1>
-  
   <%= @activity.name %>
 </h1>
 
   <% if @activity.image.attached? %>
   <p>
-    
     <%= image_tag @activity.image.variant(resize:"300x300") %> <br> <br>
-
   </p>
   <% end %>
-
 
   <p>
     <strong>Category:</strong>

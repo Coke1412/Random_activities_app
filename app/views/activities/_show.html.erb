@@ -2,8 +2,7 @@
 
 <div class="container">
 
-    
-    <p class="text-dark" ><%= @activity.name %></p>
+    <p class="text-dark"><%= @activity.name %></p>
 
     <% if @activity.image.attached? %>
     <p class="text-dark" id="modal-image">    
@@ -12,9 +11,9 @@
     <% end %>
 
 
-    <p class="text-dark" >
-    <strong>Category:</strong>
-    <%= @activity.category %>
+    <p class="text-dark">
+        <strong>Category:</strong>
+        <%= @activity.category %>
     </p>
 
     <%= link_to 'Edit', edit_activity_path(@activity) %> |

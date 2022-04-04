@@ -1,43 +1,35 @@
 <p id="notice"><%= notice %></p>
 
+<h1 class="text-center">My <br> A c t i v i t i e s</h1>
+<br>
 
+<%# CATEGORIES CARD-DECK BEGINS %>
 
+<% @activities.each_slice(3) do |activities| %>
+    
+  <div class="card-deck">
+    <% activities.each do |activity| %>
 
-  <h1 class="text-center">My <br> A c t i v i t i e s</h1>
-  <br>
-
-    <%#  CATEGORIES CARD-DECK BEGINS %>
-
-    <% @activities.each_slice(3) do |activities| %>
-        
-      <div class="card-deck">
-        <% activities.each do |activity| %>
-
-          <a class="card mb-3" data-toggle="modal" data-target="#staticBackdrop" type="button" href="<%= activity_path(activity) %>" data-remote="true">
-            
-            <% if activity.image.attached?  %>
-            <div>
-              <%= image_tag activity.image, class: "card-img-top" %>
-            </div>
-            <% end %>
-            
-            <div class="card-body overlay">
-              <h5 class="card-title display-4 text-center"> <%= activity.name %>  </h5>
-                          
-            </div>
-          
-          </a>
-
+      <a class="card mb-3" data-toggle="modal" data-target="#staticBackdrop" type="button" href="<%= activity_path(activity) %>" data-remote="true">
+        <% if activity.image.attached?  %>
+        <div>
+          <%= image_tag activity.image, class: "card-img-top" %>
+        </div>
         <% end %>
-      </div>
+        
+        <div class="card-body overlay">
+          <h5 class="card-title display-4 text-center"> <%= activity.name %> </h5>         
+        </div>
+      </a>
 
     <% end %>
+  </div>
 
-    <%# CATEGORIES CARD-DECK ENDS %>
+<% end %>
 
-    <%= render 'modal', activities: @activities %>
+<%# CATEGORIES CARD-DECK ENDS %>
 
+<%= render 'modal', activities: @activities %>
 
-
-  <%= link_to 'New Activity', new_activity_path, class: 'btn btn-primary' %> <br><br>
+<%= link_to 'New Activity', new_activity_path, class: 'btn btn-primary' %> <br><br>
 

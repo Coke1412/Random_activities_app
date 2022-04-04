@@ -14,9 +14,7 @@
 
   <% if @category.image.attached? %>
   <p>
-      
-      <%= image_tag @category.image.variant(resize:"400x400") %> <br> <br>
-     
+    <%= image_tag @category.image.variant(resize:"400x400") %> <br> <br>
   </p>
   <% end %>
 
