@@ -15,7 +15,6 @@ class ActivitiesUsersController < ApplicationController
 
   # GET /activities_users/new
   def new
-    
   end
 
   # GET /activities_users/1/edit
@@ -28,22 +27,20 @@ class ActivitiesUsersController < ApplicationController
     cat = Category.find(params[:category_id])
     act = Activity.find(params[:activity_id])
  
-      
-      cat.save
-      notice = { notice: 'Relation created'}
+    cat.save
+    notice = { notice: 'Relation created'}
+
     redirect_to root_path, notice
   end
 
   # PATCH/PUT /activities_users/1
   # PATCH/PUT /activities_users/1.json
   def update
-    
   end
 
   # DELETE /activities_users/1
   # DELETE /activities_users/1.json
   def destroy
-    
   end
 
   private
