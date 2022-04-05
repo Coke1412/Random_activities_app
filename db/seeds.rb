@@ -145,7 +145,7 @@ listening_music.image.attach(io: File.open( './app/assets/images/activities/rela
 #SPORTS
 
 Skateboarding = Activity.create(
-    name: "go skateboarding",
+    name: "Go skateboarding",
     category: Sports
 )
 

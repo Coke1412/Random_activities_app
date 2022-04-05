@@ -2,21 +2,20 @@
 
 <div class="container">
 
-    <p class="text-dark"><%= @activity.name %></p>
+  <p class="text-dark"><%= @activity.name %></p>
 
-    <% if @activity.image.attached? %>
-    <p class="text-dark" id="modal-image">    
-        <%= image_tag @activity.image.variant(resize:"400x400") %> <br> <br>
-    </p>
-    <% end %>
+	<% if @activity.image.attached? %>
+	<p class="text-dark" id="modal-image">    
+		<%= image_tag @activity.image.variant(resize:"400x400") %> <br> <br>
+	</p>
+	<% end %>
 
+	<p class="text-dark">
+		<strong>Category:</strong>
+		<%= @activity.category %>
+	</p>
 
-    <p class="text-dark">
-        <strong>Category:</strong>
-        <%= @activity.category %>
-    </p>
-
-    <%= link_to 'Edit', edit_activity_path(@activity) %> |
-    <%= link_to 'Back', activities_path %>
+	<%= link_to 'Edit', edit_activity_path(@activity) %> |
+	<%= link_to 'Back', activities_path %>
 
 </div>
