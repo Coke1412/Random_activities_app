@@ -2,20 +2,20 @@
   box-sizing: border-box;
 } 
 
-
 body {
-    background: url('https://i.imgur.com/AaQ2Utv.jpg') no-repeat center fixed;
-    background-size: cover;
-    
+  background: url('https://i.imgur.com/AaQ2Utv.jpg') no-repeat center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-
 body h1 {
-    font-family: Tangerine;
-    font-weight: normal;
-    font-size: 15vw;
-    color: antiquewhite;
-    padding-bottom: 10vw;
+  font-family: Tangerine;
+  font-weight: normal;
+  font-size: 15vw;
+  color: antiquewhite;
+  padding-bottom: 10vw;
 }
 
 body h5 {
@@ -28,74 +28,13 @@ body h5 {
 }
 
 body p {
-    font-family: 'Bellota Text', cursive;
-    text-align: justify;
-    font-size: 5vw;
-    color: whitesmoke;
-}
-
-
-.card {
-  -webkit-box-shadow: 42px 42px 47px 7px rgba(0,0,0,0.6);
-  -moz-box-shadow: 42px 42px 47px 7px rgba(0,0,0,0.6);
-  box-shadow: 42px 42px 47px 7px rgba(0,0,0,0.6);
-}
-
-.nav-item{
   font-family: 'Bellota Text', cursive;
+  text-align: justify;
+  font-size: 5vw;
+  color: whitesmoke;
 }
 
-.card-img-top {
-    height: 20vw;
-    object-fit: cover;
-    
-}
-
-#modal-image {
-  overflow: auto;
-  position: relative;
-  background-size: cover;
-}
-
-
-.card-title {
-    color:whitesmoke;
-    font-size: 5vw;
-    font-family: Tangerine;
-    position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-  }
-
-.overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition:0.5s;
-    background-color: rgb(14, 59, 77);
-  }
-
-  .card:hover .overlay {
-    opacity: 0.6;
-  }
-
-  footer {
-    clear: both;
-    position: relative;
-    height: 100px;
-    
-  }
-
- 
-  
-  @media (min-width: 768px) { 
+@media (min-width: 768px) { 
   body p {
     font-family: 'Bellota Text', cursive;
     text-align: justify;
@@ -121,5 +60,57 @@ body p {
 
   }
 }
-  
- 
+
+
+.card {
+  -webkit-box-shadow: 42px 42px 47px 7px rgba(0,0,0,0.6);
+  -moz-box-shadow: 42px 42px 47px 7px rgba(0,0,0,0.6);
+  box-shadow: 42px 42px 47px 7px rgba(0,0,0,0.6);
+}
+
+.card:hover .overlay {
+  opacity: 0.6;
+}
+
+.card-img-top {
+  height: 20vw;
+  object-fit: cover;
+}
+
+.card-title {
+  color:whitesmoke;
+  font-size: 5vw;
+  font-family: Tangerine;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.nav-item{
+  font-family: 'Bellota Text', cursive;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition:0.5s;
+  background-color: rgb(14, 59, 77);
+}
+
+#modal-image {
+  overflow: auto;
+  position: relative;
+  background-size: cover;
+}
+
+#main {
+  margin: auto;
+}
