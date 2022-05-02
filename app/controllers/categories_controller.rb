@@ -5,7 +5,6 @@ class CategoriesController < ApplicationController
   # GET /categories.json
   def index
     @categories = Category.all.order('name ASC')
-    
   end
 
   # GET /categories/1
@@ -65,16 +64,14 @@ class CategoriesController < ApplicationController
   def destroy_image
     @image = ActiveStorage::Attachment.find(params[:image_id])
     @image.purge
-    redirect_to categories_path, notice: "The image was successfully deleted." 
-
     
+    redirect_to categories_path, notice: "The image was successfully deleted." 
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_category
       @category = Category.find(params[:id])
-      
     end
 
     # Only allow a list of trusted parameters through.
