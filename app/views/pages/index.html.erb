@@ -2,13 +2,46 @@
 <h1>W e l c o m e &nbsp to <br> R a n d t i v i t i e s!</h1>
 
 <h5> Have a little free time and can't decide what to do because too many options come to your head at the same time? </h5>
-    
+
 <p class="pb-5"> Use Randtivities app to choose categories of all the things would like to do in your free time, related to art, electronics, sports, relaxation. or whichever you want. Then, select the specific activities you like and you're good to go! With just a single button, Randtivities App will make a decision for you to enjoy. As simple as that. Have fun! </p>
 
-    
+<% if user_signed_in? %>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  <p class="p-1 mb-0">What should I do now?</p>
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header p-0 m-0">
+        <ul>
+          <%# Random activity pops up here %>
+          <li id="bullet"><p class="text-dark m-0 pt-3"> <%= @activities %> !</p></li>
+        </ul>
+      </div>
+
+      <div class="modal-body">
+        <% if @activities.image.attached? %>
+        <p class="text-dark" id="modal-image">    
+          <%= image_tag @activities.image.variant(resize:"450x450") %>
+        </p>
+        <% end %>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% end %>
+
 <% unless user_signed_in? %>
-    <%= link_to "Log in", new_session_path(resource_name), class: 'btn btn-info' %> 
-    <%= link_to "Sign up", new_registration_path(resource_name), class: 'btn btn-info' %> 
+<%= link_to "Log in", new_session_path(resource_name), class: 'btn btn-info btn-lg' %> 
+<%= link_to "Sign up", new_registration_path(resource_name), class: 'btn btn-info btn-lg' %> 
 <% end %>
 <br><br>
 
