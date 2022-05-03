@@ -27,7 +27,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-# gem 'AWS'
+# Amazon S3 gem
 gem "aws-sdk-s3", group: :production, require: false
 # Entity relationship diagrams gem
 gem 'rails-erd', group: :development
@@ -43,17 +43,12 @@ gem 'activeadmin'
 #Facebook Login gem
 gem 'omniauth-facebook'
 #gem 'dotenv-rails', groups: [:development, :test]
-
-#gem Faker (generates random data)
-
+# Faker gem (generates random data)
 gem 'faker'
-
-# Chartkick
+# Chartkick gem
 gem 'chartkick'
-
 # Groupdate gem
 gem 'groupdate'
-
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
