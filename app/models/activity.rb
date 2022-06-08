@@ -6,14 +6,10 @@ class Activity < ApplicationRecord
     has_one_attached :image
 
     validates :name, presence: true
-    validates :name, uniqueness: true
     validates :image, presence: true
     validates :category_id, presence: true
     
-
-
     def to_s
         name
-    end
-    
+    end 
 end
