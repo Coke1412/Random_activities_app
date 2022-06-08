@@ -1,11 +1,14 @@
-<p id="notice"><%= notice %></p>
+<% if user_signed_in? %>
 
-<h1 class="text-center">My <br> A c t i v i t i e s</h1>
+<p id="notice"><%= notice %></p> <br><br>
+
+<h2 class="text-center">My &nbsp A c t i v i t i e s</h2>
 <br>
 
-<%# CATEGORIES CARD-DECK BEGINS %>
+<%# ACTIVITIES CARD-DECK BEGINS %>
 
-<% @activities.each_slice(3) do |activities| %>
+<%# Show current user activities %>
+<% @users_activities.each_slice(3) do |activities| %>
     
   <div class="card-deck">
     <% activities.each do |activity| %>
@@ -27,9 +30,12 @@
 
 <% end %>
 
-<%# CATEGORIES CARD-DECK ENDS %>
 
-<%= render 'modal', activities: @activities %>
+<%# ACTIVITIES CARD-DECK ENDS %>
 
-<%= link_to 'New Activity', new_activity_path, class: 'btn btn-primary' %> <br><br>
+<%= render 'modal', activities: @users_activities %>
+<br>
+<%= link_to 'Create New Activity', new_activity_path, class: 'btn btn-primary' %> 
+<br><br>
 
+<% end %>

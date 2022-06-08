@@ -1,9 +1,12 @@
 class ActivitiesController < ApplicationController
   before_action :set_activity, only: [:show, :edit, :update, :destroy, :destroy_image]
+  before_action :authenticate_user!
+
 
   # GET /activities
   # GET /activities.json
   def index
+    @users_activities = current_user.activities
     @activities = Activity.all.order('name ASC')
   end
 
@@ -26,7 +29,9 @@ class ActivitiesController < ApplicationController
   # POST /activities
   # POST /activities.json
   def create
+    @user = current_user.activities
     @activity = Activity.new(activity_params)
+    @user << @activity
     @categories = Category.pluck(:name, :id)
 
     respond_to do |format|
