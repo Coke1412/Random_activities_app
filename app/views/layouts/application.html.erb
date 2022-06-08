@@ -28,7 +28,6 @@
 
     <%= render 'shared/navbar' %>
 
-    <p class="notice mt-3 ml-3"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
     
@@ -39,7 +38,8 @@
     <!--footer section-->
     
     <footer class="bg-dark text-center text-light">
-        <p class="container pt-4">Randtivities 2020. All rights reserved. <i class="far fa-copyright"></i></p>
+        <div></div>
+        <p class="container pt-4">Randtivities <%= Time.now.year %>. All rights reserved. <span><i class="far fa-copyright fa-xs"></i></span></p>
     </footer>
     
     <%# Scripts: Jquery 3.4.1., then Popper JS 1.16.0 %>
