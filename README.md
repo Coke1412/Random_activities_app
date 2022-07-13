@@ -15,7 +15,7 @@ El tablero Trello con el backlog y las historias de usuario está disponible en 
 
 [Tablero Trello] https://trello.com/b/hVKJLaJe/randtivities-app
 
-El diseño inicial de la base de datos (no implementado aún)
+El diseño inicial de la base de datos
 contempla las siguientes tablas/modelos con las relaciones indicadas, como se puede ver en el modelo lógico:
 
 ![alt text][logic]
@@ -23,9 +23,9 @@ contempla las siguientes tablas/modelos con las relaciones indicadas, como se pu
 [logic]: /modelo_logico.jpg "Diagrama lógico"
 
 
-Para visualizar el landing page puede ingresar a:
+Para visualizar la app puede ingresar a:
 
-[Heroku] (http://g28-final-project.herokuapp.com/)
+[Heroku] (https://randtivities.herokuapp.com/)
 
 ## Pasos para levantar el proyecto:
 
